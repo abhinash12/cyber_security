@@ -105,4 +105,22 @@
 
 *** I have already killed processes earlier while tryin to delete the user hacker.
 
-*** 
+** Forked the iuctf/b649 class website on github 
+
+** Wrote a document on ssh and things I've learned about.
+
+** published it in tools->sysenv
+
+** Installed jekyll.
+
+** But didnt do it using jekyll. Could really figure out getting arounf the jekyll part
+
+** Did the setup for direct ssh connection for the local machines to vm
+
+** Lab system ip is 156.56.103.223
+
+** ssh to tha lab system first
+
+** The vm instance on lab machines ip address in 192.168.122.192
+
+** To access the vm from local machine ran the apache server in vm
