@@ -1,0 +1,28 @@
+* Key Generator
+** It generates a software activatin ket based on the username and number of days its valid. 
+** we are given a disassembled code.
+** Task is to reverse the key-generator basesd on the given disassembled code
+** And retrive the number of days.
+*** The disassembly.cs file is the disassembled code
+*** The key generator works when we click the create product key button.
+*** It calls the buttonCreateProductKey_Click() 
+*** It return concatination if 2 strings Ssout and str2
+*** Through the initial variable declarations we can see that the int32 fetches the days from textboxDays. 
+*** The final appended part str2 is a modified version of int32
+*** we can see that Dor and Tor are two functions that are used to modify int32.
+*** 
+*** Throught final product key we know the str2 value (wymddd)
+*** Lets reverse engineer by following throught the code.
+*** The lets start with DoR
+**** Its converting the characters to lower case at the end.
+**** So WYMDDD would be charArray value
+**** For each of the character it went throught the for loop and increased by 1 unsigned value.
+**** So lets decrease the characters by 1 position.
+**** It would be VXLCCC
+**** Before that if reversed the string. So let's revert back
+**** It would be CCCLCV
+**** This value is what entered into the DoR. 
+**** Let's now see what went through ToR
+**** All it dud was append values based on the value range of days.
+**** Based on the letter CCCLCV we can looki through those conditions and figure the integer values.
+**** 365 would the days which resulted in the output wymddd
