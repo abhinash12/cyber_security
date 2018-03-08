@@ -1,0 +1,108 @@
+
+* System administration and system hardening.
+
+** Went throught nsa/guides. Seemed pretty bulku and so didn't exactly know where and how to start. Later shifted to Using google to search for something when got stuck. 
+
+* Created Assigments directory in git hub.
+
+* Moved my old assignment file assignment1 to new directory.
+
+* Assignment 2 Rubric
+
+** Network
+
+*** Reviewed the network config
+
+*** Relied on goofle to look for network config files
+
+*** Tried looking at /etc/network/ interfaces/
+
+*** Then when on to look at hosts in /etc/ hosts file
+
+*** As sugggested tried connecting to google.com through the browser.
+
+*** Not succesfull
+
+*** Found that in the /etc/ hosts file there is line with ip and www.google.com next to that.
+
+*** In Hosts file we can Associate Ip addresses with hostnames 
+
+*** And the ip addresses that is associated with google.com isn't the correct one.
+
+*** Commented that line and saved the file
+
+*** Tried connecting to google.com and it worked succesfully.
+
+** Firewall
+
+*** This allows us to block the access to the programs from others in the network or internet in general.
+
+*** iptables -L listed the firewall rules
+
+*** iptables.config is the place where we can define the access control rules.
+
+*** We use the filter rulers here.
+
+*** Did'nt make much changes here.
+
+*** By defualt ubuntu uses a uncomplicated firewall(ufw).
+
+** User/Permissions
+
+*** This is where we define which all users can use the system.
+
+*** We could limit the permission for user depending on read/write access individually.
+
+*** ls -l <name> lists the permisiions of the file or directory
+
+*** We could add new users by useradd <name_of_the_user>
+
+*** Delete the users by deluser <name>
+
+*** /etc/ passwd file has the list of all users and their permissions.
+
+*** Found suspicous user by the name hacker.
+
+*** Tried delecting the user by using userdel hacker.
+
+*** But that user is currently running process and it says can't delete a user while the process is running.
+
+*** So had to kill that processes first and deleted the user later.
+
+*** Other strategies for dealing this could be to see what all processes he was running and rather than deleting him, we could restrict his permissions and observe his actions.
+
+** Logs
+
+*** Log file contains the record of all the actions that takes place with timestamps.
+
+*** /var/log/ has the list of all sorts of log files recorded.
+
+*** /var/log/ messages has all the system related stuff and general messages.
+
+*** /var/log/ auth.log has the authentication logs. who all manages to login to the system and  at what time.
+
+*** simillarly /vat/log/kern.log has the kernel logs
+
+*** There are many other log files. Didn't venture into them.
+
+*** We can always come back and study the log files to gain some insight as to what happend and when it has happened.
+
+*** UserId, time and date, files and network access could be some of things we might want to check when suspicious or during an incident.
+
+** Processes
+
+*** We can find the list of all the processes that are currently running.
+
+*** ps -A would give us all the processes. pstree would give us tree structured list all processes and sub-processes.
+
+*** Top command would give us a nice detailed version of process with resources its utilizing (cpu, ,mem, time etc)
+
+*** Based on this we can find suspicious processes that are draining the resources or taking too much computing.
+
+*** We can kill those process using their processID
+
+*** We use kill -15 <process_id> command to kill processes.
+
+*** I have already killed processes earlier while tryin to delete the user hacker.
+
+*** 

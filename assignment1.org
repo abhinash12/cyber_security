@@ -1,0 +1,23 @@
+* Github
+** Already had an existing github account. 
+** So created a new repostiory and added course instructors and AI as collabarators.
+* SSH
+** succesfull sshed to hulk.soic.indiana.edu
+** And later managed to connect to sharks.indiana.edu via hulk
+** Need bit more clarification regarding the X-forwarding. Tried doing that but didnt really understand it.
+* Docker
+** Dowloaded Docker for windows version.
+** Initially had a installed docker on dual booted ubuntu. But could not get those images dowloaded there becuase of network issues
+** Tried doing it on windows. Still need to figure out and understant how exactly it works.
+* Emacs
+** Installed Eamcs.
+** Org mode came preinstalled. Played around and had some handson.(Pretty neat, still need some getting used to. Just used org mode for this doc will use org-bullets here on)
+** Installed jekyll on the lab system other day in the class. 
+** Understood its working but still need to figure out its funcitonalities beyond the browser publication of org doc.
+* Hackthebox
+** Tried to find the invite code to the hackthebox for signup.
+** Played around for sometime, but later gave up.
+** Googled how to do and found few links with instructions.
+** Found the javascript file which has the post function.
+** Executing that generated a word. Kinda left at that, 
+** It was fun. In fact pretty much the first time working such hacks. Learned something new.
