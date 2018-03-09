@@ -1,0 +1,31 @@
+* Cracking binaries using Radare2
+** Started by downloading the crackme.bin file
+** Ran the file in radare2 using r2 ./crackme.bin
+** aaa? listed the
+** afl lists all the functions 
+** pd displays the print disambelly
+** we follow through the code and if want to seek the current address we use s
+** s <function_name> to seek to particular function
+
+** Regarding the crackme.bin binary started with the main function.
+** Looked for the funciton calls in afl
+** Then seeked to entr1.init function s entr1.init
+***  pd //to print the disambely
+*** Found nothing interesting here
+** afl //listed all functions again
+*** s main // seek to main
+*** pd //print the disambelly
+*** Found the mov qword str interesting 
+*** SuperSekretKet word is used there
+*** Tried SuperSekretKey in ./ vrackme.bin
+*** It worked and bypasses the first password.
+** Moving on to the second one
+*** Again looked through the function calls and code flow.
+*** After trying few random things in vain, based on further instructions in class presentation realized it would be random number each time for 2nd password.
+*** Followed through by changing the code flow.
+*** When the second funcion comparision is being doing moved the address bypassing that.
+*** Go throught the write mode r2 -Aw
+*** found the address it needs to jump.
+*** s 0x00400919 //seek to that address
+*** wa jmp 0x00400096a //jumps to that address
+*** That helped to get through the second password

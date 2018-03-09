@@ -1,0 +1,16 @@
+* PingChat
+** Pingchat.py has the python script which constructs and send network packets across.
+** In this scenario we have Client Vm which would acts victim computer from which we are trying to send a textfile
+** We have server VM to which we send out textfile
+** In order to do that we need to modify the script so that it reads the text file.
+** Then tokenize it by diiving each word in the text file.
+** And send each word across the network using ICMP packets.
+** This ICMP packets would be retrieved at server side(ServerVM)
+
+** The code we have already has the sendPing and ListenPing() methods
+** SendPing would be on the clientVM from which it sends the words over through ICMP packets. 
+** ListenPing() on the serverVM should be able to capture those.
+** But the current code we have message it being asked from the console and we need to tranfer the words in the textfile through these messages
+** For this we need to include a python code to read a text file.
+** Then read each word in the file and pass through the sendPing funciton.
+** Then we implement out ListenPing code at server on the background which gets these messages from the vlientVM.

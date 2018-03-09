@@ -4,9 +4,7 @@
 ** Went throught nsa/guides. Seemed pretty bulku and so didn't exactly know where and how to start. Later shifted to Using google to search for something when got stuck. 
 
 * Created Assigments directory in git hub.
-
 * Moved my old assignment file assignment1 to new directory.
-
 * Assignment 2 Rubric
 
 ** Network
@@ -36,17 +34,12 @@
 ** Firewall
 
 *** This allows us to block the access to the programs from others in the network or internet in general.
-
-*** iptables -L listed the firewall rules
-
+*** iptables -L listed all the firewall rules
 *** iptables.config is the place where we can define the access control rules.
 
 *** We use the filter rulers here.
-
-*** Did'nt make much changes here.
-
+*** Didn't make much changes here.
 *** By defualt ubuntu uses a uncomplicated firewall(ufw).
-
 ** User/Permissions
 
 *** This is where we define which all users can use the system.
@@ -70,7 +63,7 @@
 *** So had to kill that processes first and deleted the user later.
 
 *** Other strategies for dealing this could be to see what all processes he was running and rather than deleting him, we could restrict his permissions and observe his actions.
-
+    
 ** Logs
 
 *** Log file contains the record of all the actions that takes place with timestamps.

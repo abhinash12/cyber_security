@@ -10,10 +10,10 @@
 *** Through the initial variable declarations we can see that the int32 fetches the days from textboxDays. 
 *** The final appended part str2 is a modified version of int32
 *** we can see that Dor and Tor are two functions that are used to modify int32.
-*** 
+ 
 *** Throught final product key we know the str2 value (wymddd)
 *** Lets reverse engineer by following throught the code.
-*** The lets start with DoR
+*** Starting with DoR
 **** Its converting the characters to lower case at the end.
 **** So WYMDDD would be charArray value
 **** For each of the character it went throught the for loop and increased by 1 unsigned value.

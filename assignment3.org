@@ -1,2 +1,48 @@
 * BCFG2
-** 
+** This tool helps in producing verifiable description of environments and helps in visualizations and also aids in reporting. 
+** This would help in administrative tasks.
+** Large number of computer configurations could be easily maintained and handled through bcfd2
+** It is an important tool to aid in infrastruture management lifecycle which includes:
+*** In configuration analysis
+*** Service Deployment
+*** Configuration Auditing
+** It is based in client-server architecture
+*** The client is reponsible for interepreting configurations served by server.
+*** Once the configuration is done client uploads the statistics to the server.
+** It is cross-plarform and written in python
+
+
+*Preparation
+** Updated the current VM using apt-get update and apt-get upgrade
+** added the ip address of host machine and the vm in /etc/gosts file
+*** 192.168.122.156 vm23-server.soic.indiana.edu vm23-server
+*** 192.168.122.192 vm23-client.soic.indiana.edu vm23-client
+** updated the /etc/hostnames with vm23-server
+** Commented the code in /etc/rc.local
+** Cloned the instance of the VM
+* Setup
+** Server
+*** Initiated the admin using bcfg2-admin init
+*** configured /etc/bcfg2.conf file (included the server component at the end.
+** Client
+*** tranfered the bvfg2.crt fule and the bcfg2 password from the server.(ftp) 
+*** copied the bcf2.crt fiel I've transfer to /etc/ssl/bcfg2.crt
+*** COnfigured the /etc/bcfg2.conf with correct path and also the password.
+** Once done with server and client setup Start the bcfg2 on server
+*** this could be done by /etc/init.d/bcfg2-server start
+*** We could stop it and restart if we want to
+** Go to the client instance and run bcfg2 -qve to tun the sync wth server configuration.
+** We then create a recipe by creating a bundle
+** Included the path name to hosts in hosts.html located in /var/lib/bcfg2/Bundler/
+** Created the crondjob.xml at /var/lib/bcfg2/Bundle with the same config as hosts.xml
+** Applied configuration in hosts.genshi located at /var/lib/bcfg2/Cfg/etc/hosts/
+** This file contains the python script which adds aentry for every line in ip_lists.txt
+** Used the same template to create the bcfg2.genshi.
+** In the templete we followed earlier to create crondjob write it so that it runs bcfg2 -qev at our chosen time on server and client
+** We include this in the template
+** The bcfg2.genshi is placed in /var/lib/bcfg2/Cfg/etc/cron.d/
+
+* Final take aways, understood bcfg2 working but still bot confortable with envirnoment and its working
+* Would need more getting used. and haven't really understood what other things the sys admin could do and what all things we can visulize using bcfg2.
+
+

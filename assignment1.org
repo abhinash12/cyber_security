@@ -20,4 +20,4 @@
 ** Googled how to do and found few links with instructions.
 ** Found the javascript file which has the post function.
 ** Executing that generated a word. Kinda left at that, 
-** It was fun. In fact pretty much the first time working such hacks. Learned something new.
+** It was fun. In fact pretty much the first time trying such hacks. Learned something new.
