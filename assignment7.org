@@ -14,4 +14,9 @@ Radare2
 *** listed all the function using afl
 *** started with main// s main
 *** printed disambelly // pd
-*** 
+*** we can see a call instruction with a push instruction to jump to win function
+*** looked throught the win function.
+*** from there instead of returning the to main function we return the win function to the addr 0x0040116b
+***  then we utilize the get string call.
+*** use the python shell script to by pass that and we call find the flag tuck in the binary.
+*** It is flag{h3llo W0rld}
