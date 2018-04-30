@@ -72,7 +72,6 @@ a = rdpcap("/Assignment9.pcap")
 op=b''
 
 for i in range(len(a)):
-	
 	p=a[i]
 	if p.haslayer(ICMP) and p[IP].src=="138.197.108.176" and p[IP].dst=="192.168.64.137":
 		op += binascii.hexlify(p[Raw].load)
@@ -80,4 +79,6 @@ for i in range(len(a)):
 with open("opt.hex","wb") as hfile:
 	hfile.write(op)
 
-***
+*** Then we use the xxd -r -p opt.hex opt.bin
+*** The file type has to be identified and its a image png file so lets convert.
+*** xxd -r -p opt.hex opt.png
