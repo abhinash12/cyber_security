@@ -56,5 +56,5 @@
 
 ** Navigated to the stego-toolkit/ data / results and looked through all different image versions that were generated.
 
-** Flaf wason the top part and after looking through few images it was legible. flag{W0AH_5UCH_53rct_m355ag3}
+** Flag wason the top part and after looking through few images it was legible. flag{W0AH_5UCH_53rct_m355ag3}
 
