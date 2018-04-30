@@ -1,0 +1,47 @@
+
+* Downloaded the part1.secret file
+
+** Checked the file type
+
+** file part1.secret
+
+** PNG image data, 580 * 435, 8-bit/color RGBA, non-interlaced.
+
+** Tried installing the docker image for stego-toolkit
+
+** VM doesn't enough space
+
+** Tried with binwalk
+
+*** binwalk -e part1.secret
+
+*** binwalk -U part1.secret
+
+*** No progress with binwalk. No files to extract or isolate embedded stuff.
+
+** used strings part1.secret
+
+*** Returned a random characters. could'nt finding any flag there.
+
+** Downloaded steghide
+
+*** steghide extract -vf part1.secret
+
+*** only works on jpg files
+
+**  used pngcheck
+
+*** pncheck -vt part1.secret
+
+*** returned few offset and length. No flag.
+
+
+** Tried with gimp
+
+*** added an extra layer
+
+*** merged and tried different filters
+
+*** Used enhase and shared image features. Didnt work.
+
+** Downloaded stegsolve. A java program which applies color filters. Didnt work.

@@ -1,0 +1,58 @@
+
+* Dowloaded the Assignmnet9.pcap file.
+
+* Opened with wireshark and looked around. It has many ip address involved.
+
+* 1st question: Unique ipv4 addresses
+
+** used tshark for this
+
+** tshark -r Assignments9.pcap -q -z hosts,ipv4
+
+*** retuned hosts and ipv4 addresses
+
+*** used the wc -l to count the line //tshark -r Assignements9.pcap -q -z hosts,ipv4 | wc -l
+
+*** returned 237. havent worked in exfil flag.
+
+** tried tshark -r Assignments9.pcap -T fields -e ip.dst ip.src | sort | uniq | wc -l
+
+*** returned 223.
+
+*** Flag is 223. Worked in the exfil challenge.
+    
+* 2nd: source and destination ip addreses leaking info
+
+** tcpdump -tnr Assignment9.pcap | sort | uniq | sort -n | tail
+
+** returned source and destination ip with maxpacket length
+
+** Noisiest hosts on the network
+
+** Tried ip's with max activity and packet lenghts. Didnt work
+
+** Uplaoded the file in wireshark.
+
+** Browsed around to any suspicious activity.
+
+** Looked for ICMP protocol has more activity than usual.
+
+** Filtered ICMP protocol in that pcap file
+
+** Found the IP addresses of the leaker and the reciever.
+
+** IP address thats leaking information. 192.168.64.137
+
+** IP address that's recieving the information 138.197.108.176
+
+* 3rd question: Finding the flag
+
+** Now that we have identified the source, destination and the protocol used(ICMP)
+
+** Lets use this info find the file and the flag.
+
+** we use scapy for this.
+
+*** Its a packet manipulation program.
+
+*** It can forge and decode packets of different protocols.
