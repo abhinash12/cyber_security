@@ -1,0 +1,17 @@
+Radare2
+* Downloaded the tmpserver.cgi.zip from the given link
+* extracted the file to tmpwserver.cgi
+* Tried running the tmpserver.cgi file
+** error while loading the shared libraries
+** Tried fixing that didnt seem to work
+** Looked to install the libgcc library, didn't wokr 
+** Decided to move on see the binary to learn anything from that
+* Opened the binary file with r2
+**  r2 ./tmpserver.cgi
+*** Started with address [0x00401050]
+*** Printed disambely using pd
+*** aaa
+*** listed all the function using afl
+*** started with main// s main
+*** printed disambelly // pd
+*** 
