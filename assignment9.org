@@ -82,3 +82,4 @@
 *** Then we use the xxd -r -p opt.hex opt.bin
 *** The file type has to be identified and its a image png file so lets convert.
 *** xxd -r -p opt.hex opt.png
+*** Had an error while converting. could open the image png file.
