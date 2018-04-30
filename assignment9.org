@@ -56,3 +56,11 @@
 *** Its a packet manipulation program.
 
 *** It can forge and decode packets of different protocols.
+
+*** We can construct packets and print thing we need based on protocols using the python code.
+
+*** Now that we know the ip addresses of person leaking and recieving the info we need to find the file and the flag in it.
+
+*** We read the pcap file a =rdpcap("/../Assignment9.pcap")
+
+*** 
